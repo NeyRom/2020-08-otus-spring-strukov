@@ -12,7 +12,6 @@ public class XmlConfigApplication {
         ClassPathXmlApplicationContext context = new
                 ClassPathXmlApplicationContext("/spring-context.xml");
         TestQuestionService service = context.getBean(TestQuestionService.class);
-        service.setStudent();
         service.conductTesting(context.getResource(service.getResource()));
     }
 }
